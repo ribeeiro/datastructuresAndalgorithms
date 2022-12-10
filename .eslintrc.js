@@ -21,8 +21,11 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:@typescript-eslint/recommended-requiring-type-checking'
       ],
+      rules: {
+        '@typescript-eslint/strict-boolean-expressions': 'off'
+      },
       parserOptions: {
-        project: ['tsconfig.json']
+        project: ['./tsconfig.json']
       }
     }
   ]
