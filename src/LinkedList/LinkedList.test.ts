@@ -41,4 +41,24 @@ describe('Test Linked List methods', () => {
       expect(List.toArray().at(-1)).toBe(2);
     });
   });
+
+  describe('unshift method', () => {
+    it('Should return the element inserted in the list', () => {
+      expect(List.unshift('78')).toBe('78');
+    });
+
+    it('Should append the element in the beginning of the List', () => {
+      expect(List.toArray()[0]).toBe('78');
+    });
+  });
+
+  describe('shift method', () => {
+    it('Should return the element removed from the list', () => {
+      expect(List.shift()).toBe('78');
+    });
+
+    it('Should remove the element in the beginning of the List', () => {
+      expect(List.toArray()[0]).not.toBe('78');
+    });
+  });
 });
